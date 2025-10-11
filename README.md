@@ -22,3 +22,21 @@
 
 
 
+
+## WoWProgress Scraper
+
+This repository now contains `wowprogress_scraper.py`, a Playwright-based tool
+that collects the active roster of a World of Warcraft guild from
+[wowprogress.com](https://www.wowprogress.com/) and extracts the social media
+handles (Battle.net, Discord, etc.) listed on each member profile.
+
+```bash
+pip install -r requirements.txt
+playwright install chromium
+python wowprogress_scraper.py --region eu --realm draenor --guild Method --stealth \
+    --output method_roster.json
+```
+
+> **Hint:** When running inside a headless environment (like a Linux server)
+you may need to prefix the command with `xvfb-run -a` or disable `--headless`
+to let Playwright negotiate Cloudflare challenges more reliably.
