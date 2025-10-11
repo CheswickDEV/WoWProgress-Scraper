@@ -18,24 +18,3 @@
 
 <h3 align="left">Languages and Tools:</h3>
 <p align="left"> <a href="https://www.gnu.org/software/bash/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="bash" width="40" height="40"/> </a> <a href="https://www.w3schools.com/cs/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40"/> </a> <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a> <a href="https://www.photoshop.com/en" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" alt="photoshop" width="40" height="40"/> </a> </p>
-
-
-
-
-## WoWProgress Scraper
-
-This repository now contains `wowprogress_scraper.py`, a Playwright-based tool
-that collects the active roster of a World of Warcraft guild from
-[wowprogress.com](https://www.wowprogress.com/) and extracts the social media
-handles (Battle.net, Discord, etc.) listed on each member profile.
-
-```bash
-pip install -r requirements.txt
-playwright install chromium
-python wowprogress_scraper.py --region eu --realm draenor --guild Method --stealth \
-    --output method_roster.json
-```
-
-> **Hint:** When running inside a headless environment (like a Linux server)
-you may need to prefix the command with `xvfb-run -a` or disable `--headless`
-to let Playwright negotiate Cloudflare challenges more reliably.
